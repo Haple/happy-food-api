@@ -52,6 +52,7 @@ Fico contente pelo interesse! Primeiro preciso que você confira se tem o seguin
 - NodeJS
 - Yarn
 - Docker
+- Docker Compose
 
 Depois de clonar o projeto na sua máquina, entre na pasta do projeto e execute esse comando para instalar as dependências:
 
@@ -61,6 +62,12 @@ Por último, basta executar o servidor com o seguinte comando:
 
 `yarn dev:server`
 
+Após rodar esse último comando, o servidor vai iniciar na porta 3333.
+
+Você pode conferir se deu tudo certo chamando o endpoint "http://localhost:3333/health".
+
+
+TODO: colocar passos para executar o projeto com Docker
 
 ## Como faço para executar os testes?
 Bem simples! Entre na pasta do projeto e execute o comando:
