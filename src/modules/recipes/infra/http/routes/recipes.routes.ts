@@ -1,11 +1,11 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
 
 import { celebrate, Segments, Joi } from 'celebrate';
 
-// import RecipesController from '../controllers/RecipesController';
+import RecipesController from '../controllers/RecipesController';
 
 const recipesRouter = Router();
-// const recipesController = new RecipesController();
+const recipesController = new RecipesController();
 
 recipesRouter.get(
   '/',
@@ -14,9 +14,7 @@ recipesRouter.get(
       i: Joi.string().required(),
     },
   }),
-  // recipesController.index,
-  (request: Request, response: Response) =>
-    response.json({ keywords: request.query.i }),
+  recipesController.index,
 );
 
 export default recipesRouter;
