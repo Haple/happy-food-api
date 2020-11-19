@@ -1,7 +1,7 @@
 import axios from 'axios';
 import IGifsProvider from '../models/IGifsProvider';
 
-interface IGifData {
+interface IGifDataDTO {
   images: {
     original: {
       url: string;
@@ -9,13 +9,15 @@ interface IGifData {
   };
 }
 
-interface IGetGifUrlResponse {
-  data: IGifData[];
+interface IGetGifUrlResponseDTO {
+  data: IGifDataDTO[];
 }
 
 class GiphyGifsProvider implements IGifsProvider {
   public async getGifUrl(searchPhrase: string): Promise<string> {
-    const response = await axios.get<IGetGifUrlResponse>(
+    const {
+      data: { data },
+    } = await axios.get<IGetGifUrlResponseDTO>(
       `${process.env.PROVIDER_GIPHY_URL}/v1/gifs/search`,
       {
         params: {
@@ -25,7 +27,7 @@ class GiphyGifsProvider implements IGifsProvider {
         },
       },
     );
-    return response.data.data[0].images.original.url;
+    return data[0].images.original.url;
   }
 }
 
