@@ -1,5 +1,5 @@
-import IRecipe from './IRecipe';
+import IRecipeDTO from './IRecipeDTO';
 
 export default interface IRecipesProvider {
-  searchRecipes(ingredients: string[]): Promise<IRecipe[]>;
+  searchRecipes(ingredients: string[]): Promise<IRecipeDTO[]>;
 }

@@ -14,7 +14,7 @@ Você pode passar até 3 ingredientes. Como resposta você pode esperar os parâ
 
 Quer um exemplo? Imagina que você chamou a API dessa maneira:
 ```
-GET http://localhost:3333/recipes/?i=onion,tomato
+GET http://localhost:3333/recipes/?i=tomato,hamburger,milk
 
 ```
 
@@ -22,17 +22,12 @@ Uma possível resposta vai ser o seguinte:
 
 ```
 {
-	"keywords": ["onion", "tomato"],
+	"keywords": ["tomato", "hamburger", "milk"],
 	"recipes": [{
-		"title": "Greek Omelet with Feta",
-		"ingredients": ["eggs", "feta cheese", "garlic", "red onions", "spinach", "tomato", "water"],
-		"link": "http://www.kraftfoods.com/kf/recipes/greek-omelet-feta-104508.aspx",
-		"gif": "https://media.giphy.com/media/xBRhcST67lI2c/giphy.gif"
-	   },{
-		"title": "Guacamole Dip Recipe",
-		"ingredients": ["avocado", "onions", "tomato"],
-		"link":"http://cookeatshare.com/recipes/guacamole-dip-2783",
-		"gif":"https://media.giphy.com/media/I3eVhMpz8hns4/giphy.gif"
+		"title": "Cheesy Cheeseburger Casserole",
+		"ingredients": ["tomato", "hamburger", "milk","elbow macaroni"],
+		"link": "http://www.recipe4living.com/recipes/cheesy_cheeseburger_casserole.htm",
+		"gif": "https://media2.giphy.com/media/uQvxobRExS9nG/giphy.gif?cid=2d89829dfojttkebkdzua1bg0q7ai2e6rltxrc41ei6o7ssm&rid=giphy.gif"
 	   }
 	]
 }

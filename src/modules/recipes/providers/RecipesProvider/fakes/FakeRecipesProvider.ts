@@ -1,8 +1,8 @@
-import IRecipe from '../models/IRecipe';
+import IRecipeDTO from '../models/IRecipeDTO';
 import IRecipesProvider from '../models/IRecipesProvider';
 
 class FakeRecipesProvider implements IRecipesProvider {
-  public async searchRecipes(ingredients: string[]): Promise<IRecipe[]> {
+  public async searchRecipes(ingredients: string[]): Promise<IRecipeDTO[]> {
     return [
       {
         title: 'Greek Omelet with Feta',
