@@ -47,7 +47,6 @@ Fico contente pelo interesse! Primeiro preciso que você confira se tem o seguin
 - NodeJS
 - Yarn
 - Docker
-- Docker Compose
 
 Depois de clonar o projeto na sua máquina, entre na pasta do projeto, copie o arquivo `.env.example` renomeando para `.env`. As variáveis que possuem vários pontos de interrogação (????) são para que você lembre de preecher com os seus valores e são pessoais, como a váriavel "PROVIDER_GIPHY_API_KEY", que é onde você deve colocar a chave da API do Giphy.
 
