@@ -49,7 +49,9 @@ Fico contente pelo interesse! Primeiro preciso que você confira se tem o seguin
 - Docker
 - Docker Compose
 
-Depois de clonar o projeto na sua máquina, entre na pasta do projeto e execute esse comando para instalar as dependências:
+Depois de clonar o projeto na sua máquina, entre na pasta do projeto, copie o arquivo `.env.example` renomeando para `.env`. As variáveis que possuem vários pontos de interrogação (????) são para que você lembre de preecher com os seus valores e são pessoais, como a váriavel "PROVIDER_GIPHY_API_KEY", que é onde você deve colocar a chave da API do Giphy.
+
+Agora execute esse comando para instalar as dependências:
 
 `yarn`
 
@@ -62,7 +64,15 @@ Após rodar esse último comando, o servidor vai iniciar na porta 3333.
 Você pode conferir se deu tudo certo chamando o endpoint "http://localhost:3333/health".
 
 
-TODO: colocar passos para executar o projeto com Docker
+### Psiu! Se quiser rodar a aplicação usando Docker, dá também!
+Execute os comandos:
+
+```
+docker build -t happy-food-api .
+docker run -p 3333:3333 -d happy-food-api
+
+```
+
 
 ## Como faço para executar os testes?
 Bem simples! Entre na pasta do projeto e execute o comando:
